@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judiciary Navigator with AI Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="website-heading">
+        <h1> Judiciary Navigator </h1>
+    </div>
+
+    <div class="main-content">
+        <div class="right-content">
+            <nav>
+                <div class="dropdown">
+                    <a href="#">Home</a>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#">Service</a>
+                    <div class="dropdown-content">
+                        <a href="#case-status">Case Status</a>
+                        <a href="#case-list">Case List</a>
+                        <a href="#case-order">Case Order</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#">Documents</a>
+                    <div class="dropdown-content">
+                        <a href="#all-documents">All Documents</a>
+                        <a href="#circular-notices">Circular Notices</a>
+                        <a href="#notifications">Notifications</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#">Notices</a>
+                    <div class="dropdown-content">
+                        <a href="#tender">Tender</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#">About Courts</a>
+                    <div class="dropdown-content">
+                        <a href="#holidays">Holidays</a>
+                        <a href="#contact-us">Contact Us</a>
+                    </div>
+                </div>
+
+            </nav>
+
+            <!-- Hero Image Section -->
+            <section class="hero-image" id="home">
+                <!-- Court Image as the hero image, spans half of screen height -->
+            </section>
+
+            <!-- AI Chatbot Section -->
+            <section class="chatbot" id="service">
+                <h2>AI Chatbot</h2>
+                <div class="chat-container">
+                    <input type="text" id="chat-input" placeholder="Ask a question about the Judiciary...">
+                    <button onclick="chatbotResponse()">Send</button>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about" id="about-courts">
+                <h2>About Judiciary Navigator</h2>
+                <p>Welcome to the Judiciary Navigator with AI Chatbot. This website helps you navigate through the various judiciary-related services including case status, case lists, notices, and much more. Our AI Chatbot can assist you in finding the information you need quickly and efficiently.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Bottom Right Login Section -->
+    <div class="auth-section">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" id="username">
+        <input type="password" placeholder="Password" id="password">
+        <button>Login</button>
+        <span>Don't have an account? <a href="#">Sign Up</a></span>
+    </div>
+
+    <script>
+        // Simple chatbot response functionality
+        function chatbotResponse() {
+            var userInput = document.getElementById('chat-input').value;
+            if (userInput) {
+                alert('AI Chatbot: ' + userInput);
+                document.getElementById('chat-input').value = ''; // Clear input field
+            } else {
+                alert('Please enter a question.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
