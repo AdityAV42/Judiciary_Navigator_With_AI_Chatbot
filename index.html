@@ -64,8 +64,11 @@
             <section class="chatbot" id="service">
                 <h2>AI Chatbot</h2>
                 <div class="chat-container">
-                    <input type="text" id="chat-input" placeholder="Ask a question about the Judiciary...">
-                    <button onclick="chatbotResponse()">Send</button>
+                    <div class="messages" id="messages"></div>
+                    <div class="input-container">
+                      <input type="text" id="userInput" placeholder="Type your message...">
+                      <button onclick="sendMessage()">Send</button>
+                    </div>
                 </div>
             </section>
 
@@ -87,10 +90,42 @@
         <span>Don't have an account? <a href="#">Sign Up</a></span>
     </div>
 
-    <script>
-        // Simple chatbot response functionality
-      
-    </script>
+
+    
+      <script>
+        const messagesDiv = document.getElementById("messages");
+    
+        function addMessage(content, role) {
+          const message = document.createElement("div");
+          message.classList.add("message", role);
+          message.textContent = content;
+          messagesDiv.appendChild(message);
+          messagesDiv.scrollTop = messagesDiv.scrollHeight; // Scroll to the latest message
+        }
+    
+        async function sendMessage() {
+          const input = document.getElementById("userInput");
+          const message = input.value;
+          if (!message) return;
+    
+          addMessage(message, "user");
+          input.value = "";
+    
+          try {
+            const response = await fetch("http://localhost:3000/chat", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ message }),
+            });
+    
+            const data = await response.json();
+            addMessage(data.reply, "chatbot");
+          } catch (error) {
+            console.error("Error:", error);
+            addMessage("Error: Unable to connect to the chatbot.", "chatbot");
+          }
+        }
+      </script>
 
 </body>
 
