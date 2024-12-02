@@ -4,7 +4,7 @@ This was done in a team of 3 (CSAIML-1):
 
          1)ADITYA VINAYAK
          2)ADITI SINGH ( https://github.com/AditiSingh-08 )
-         3)ADITI SINGH
+         3)ADITI SINGH ( https://github.com/Ads0507 )
 
 #Objective
 
