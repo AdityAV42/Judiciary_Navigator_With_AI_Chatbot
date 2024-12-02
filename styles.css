@@ -108,6 +108,7 @@ nav a {
   padding: 40px;
   background-color: #e8e8e8;
   text-align: center;
+  height: 500px;
 }
 
 .chatbot h2 {
@@ -122,6 +123,7 @@ nav a {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  height: 400px;
 }
 
 .chat-container input {
@@ -131,7 +133,9 @@ nav a {
   border: 1px solid #ddd;
   border-radius: 5px;
 }
+.chat-container .input-container{
 
+}
 .chat-container button {
   width: 100%;
   padding: 10px;
