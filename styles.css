@@ -1,229 +1,298 @@
 /* General page styling */
 body,
 html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Fixed Website Heading */
 .website-heading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #630606;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 27px;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #5b55a5, #6f5dd6);
+    font-size: 27px;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .website-heading h1 {
-  margin: 0;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* Main content section (spaced from heading) */
-.main-content {
-  margin-top: 60px;
-  display: flex;
-  flex: 1;
+/* Search Bar */
+.search-bar {
+    margin: 80px auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Right-side Main Content */
-.right-content {
-  margin-left: 0;
-  width: 100vw;
-  padding: 20px;
-  overflow: auto;
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #6f5dd6;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background: #6f5dd6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: #5146a3;
 }
 
 /* Navbar styling */
 nav {
-  background-color: #02265889;
-  color: white;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-evenly;
-  text-align: justify;
-  font-family: Georgia, "Times New Roman", Times, serif;
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: justify;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background: #5146a3;
+    color: #f4f4f4;
+    border-radius: 4px;
 }
 
 /* Dropdown Styling */
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #333;
-  min-width: 160px;
-  z-index: 1;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border-radius: 4px;
 }
 
 .dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background 0.3s ease;
 }
 
 .dropdown-content a:hover {
-  background-color: #575757;
+    background: #f4f4f4;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
-/* Hero Image section */
+/* Hero Image Section */
 .hero-image {
-  width: 100vw;
-  height: 60vh;
-  background-image: url("judiciary_image_hero.jpeg");
-  /* Replace with your image */
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 40px;
-  padding: 10px;
+    width: 100vw;
+    height: 70vh;
+    background: url("judiciary_image_hero.jpeg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-/* Chatbot Section */
+/* AI Chatbot Section */
 .chatbot {
-  padding: 40px;
-  background-color: #e8e8e8;
-  text-align: center;
-  height: 500px;
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
 }
 
 .chatbot h2 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
 }
 
 .chat-container {
-  background-color: white;
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  height: 400px;
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container .messages {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
 }
 
 .chat-container input {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+    width: calc(100% - 110px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-.chat-container .input-container{
 
-}
 .chat-container button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    width: 100px;
+    padding: 10px;
+    background: #6f5dd6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .chat-container button:hover {
-  background-color: #0056b3;
+    background: #5146a3;
 }
 
 /* About Section */
 .about {
-  padding: 50px;
-  background-color: #fff;
-  text-align: center;
-  margin-bottom: 40px;
+    padding: 50px 20px;
+    background: white;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 /* Bottom Right Login Section */
 .auth-section {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 200px;
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 250px;
+    background: linear-gradient(90deg, #5b55a5, #5146a3);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 14px;
 }
 
 .auth-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .auth-section input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
 }
 
 .auth-section button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .auth-section button:hover {
-  background-color: #45a049;
-}
-
-.auth-section span {
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
+    background: #45a049;
 }
 
 .auth-section a {
-  color: #ddd;
-  text-decoration: none;
+    color: #ddd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-section a:hover {
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .auth-section {
-    width: 200px;
-    right: 10px;
-    bottom: 10px;
-  }
+    .search-bar input {
+        width: 200px;
+    }
 
-  .hero-image {
-    height: 40vh;
-  }
+    .hero-image {
+        height: 50vh;
+        font-size: 1.5rem;
+    }
 
-  .chat-container {
-    width: 90%;
-  }
+    .auth-section {
+        width: 90%;
+        right: 5%;
+        bottom: 5%;
+    }
+
+    nav {
+        font-size: 14px;
+    }
 }
-

@@ -9,12 +9,21 @@
 </head>
 
 <body>
+    <!-- Fixed Website Heading -->
     <div class="website-heading">
         <h1> Judiciary Navigator </h1>
     </div>
 
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for case status, lawyers, notices..." id="search-input">
+        <button onclick="performSearch()">Search</button>
+    </div>
+
+    <!-- Main Content Section -->
     <div class="main-content">
         <div class="right-content">
+            <!-- Navigation Bar -->
             <nav>
                 <div class="dropdown">
                     <a href="#">Home</a>
@@ -52,12 +61,11 @@
                         <a href="#contact-us">Contact Us</a>
                     </div>
                 </div>
-
             </nav>
 
             <!-- Hero Image Section -->
             <section class="hero-image" id="home">
-                <!-- Court Image as the hero image, spans half of screen height -->
+                <!-- Court Image as the hero image -->
             </section>
 
             <!-- AI Chatbot Section -->
@@ -66,8 +74,8 @@
                 <div class="chat-container">
                     <div class="messages" id="messages"></div>
                     <div class="input-container">
-                      <input type="text" id="userInput" placeholder="Type your message...">
-                      <button onclick="sendMessage()">Send</button>
+                        <input type="text" id="userInput" placeholder="Type your message...">
+                        <button onclick="sendMessage()">Send</button>
                     </div>
                 </div>
             </section>
@@ -75,9 +83,11 @@
             <!-- About Section -->
             <section class="about" id="about-courts">
                 <h2>About Judiciary Navigator</h2>
-                <p>The Judiciary Navigator with AI Chatbot <br> This website helps you navigate through the various judiciary-related services including case status, case lists, notices, and much more. <br> Our AI Chatbot can assist you in finding the information you need quickly and efficiently.</p>
+                <p>
+                    The Judiciary Navigator with AI Chatbot helps you navigate judiciary-related services, including
+                    case status, notices, and more. Our AI Chatbot assists you in finding information quickly and efficiently.
+                </p>
             </section>
-
         </div>
     </div>
 
@@ -90,43 +100,60 @@
         <span>Don't have an account? <a href="#">Sign Up</a></span>
     </div>
 
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Judiciary Navigator. All Rights Reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#contact-us">Contact Us</a>
+        </p>
+    </footer>
 
-    
-      <script>
+    <script>
+        // Perform Search
+        function performSearch() {
+            const query = document.getElementById('search-input').value;
+            if (query) {
+                alert(`Search for: ${query}`);
+                // Add your search logic here
+            } else {
+                alert('Please enter a search term.');
+            }
+        }
+
+        // Chatbot Functionality
         const messagesDiv = document.getElementById("messages");
-    
-        function addMessage(content, role) {
-          const message = document.createElement("div");
-          message.classList.add("message", role);
-          message.textContent = content;
-          messagesDiv.appendChild(message);
-          messagesDiv.scrollTop = messagesDiv.scrollHeight; // Scroll to the latest message
-        }
-    
-        async function sendMessage() {
-          const input = document.getElementById("userInput");
-          const message = input.value;
-          if (!message) return;
-    
-          addMessage(message, "user");
-          input.value = "";
-    
-          try {
-            const response = await fetch("http://localhost:3000/chat", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ message }),
-            });
-    
-            const data = await response.json();
-            addMessage(data.reply, "chatbot");
-          } catch (error) {
-            console.error("Error:", error);
-            addMessage("Error: Unable to connect to the chatbot.", "chatbot");
-          }
-        }
-      </script>
 
+        function addMessage(content, role) {
+            const message = document.createElement("div");
+            message.classList.add("message", role);
+            message.textContent = content;
+            messagesDiv.appendChild(message);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight; // Scroll to the latest message
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById("userInput");
+            const message = input.value;
+            if (!message) return;
+
+            addMessage(message, "user");
+            input.value = "";
+
+            try {
+                const response = await fetch("http://localhost:3000/chat", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message }),
+                });
+
+                const data = await response.json();
+                addMessage(data.reply, "chatbot");
+            } catch (error) {
+                console.error("Error:", error);
+                addMessage("Error: Unable to connect to the chatbot.", "chatbot");
+            }
+        }
+    </script>
 </body>
 
 </html>
