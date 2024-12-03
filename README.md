@@ -18,5 +18,5 @@ This was done in a team of 3 (CSAIML-1):
 
 5. This project include integrated ai chat bot
 
-6. this is best project
+6. this is best project on judicial review
 
