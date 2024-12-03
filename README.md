@@ -17,3 +17,6 @@ This was done in a team of 3 (CSAIML-1):
 4. In the end, this project aims to improve the community's access to justice by increasing judicial transparency, encouraging diversity, and streamlining court procedures.
 
 5. This project include integrated ai chat bot
+
+6. this is best project
+
