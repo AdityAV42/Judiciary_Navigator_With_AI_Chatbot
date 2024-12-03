@@ -4,92 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Judiciary Navigator with AI Chatbot</title>
+    <title>Justice Portal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Fixed Website Heading -->
+    <!-- Updated Justice Portal Header -->
     <div class="website-heading">
-        <h1> Judiciary Navigator </h1>
-    </div>
-
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <input type="text" placeholder="Search for case status, lawyers, notices..." id="search-input">
-        <button onclick="performSearch()">Search</button>
-    </div>
-
-    <!-- Main Content Section -->
-    <div class="main-content">
-        <div class="right-content">
-            <!-- Navigation Bar -->
-            <nav>
-                <div class="dropdown">
-                    <a href="#">Home</a>
-                </div>
-
-                <div class="dropdown">
-                    <a href="#">Service</a>
-                    <div class="dropdown-content">
-                        <a href="#case-status">Case Status</a>
-                        <a href="#case-list">Case List</a>
-                        <a href="#case-order">Case Order</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <a href="#">Documents</a>
-                    <div class="dropdown-content">
-                        <a href="#all-documents">All Documents</a>
-                        <a href="#circular-notices">Circular Notices</a>
-                        <a href="#notifications">Notifications</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <a href="#">Notices</a>
-                    <div class="dropdown-content">
-                        <a href="#tender">Tender</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <a href="#">About Courts</a>
-                    <div class="dropdown-content">
-                        <a href="#holidays">Holidays</a>
-                        <a href="#contact-us">Contact Us</a>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- Hero Image Section -->
-            <section class="hero-image" id="home">
-                <!-- Court Image as the hero image -->
-            </section>
-
-            <!-- AI Chatbot Section -->
-            <section class="chatbot" id="service">
-                <h2>Chatbot</h2>
-                <div class="chat-container">
-                    <div class="messages" id="messages"></div>
-                    <div class="input-container">
-                        <input type="text" id="userInput" placeholder="Type your message...">
-                        <button onclick="sendMessage()">Send</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section class="about" id="about-courts">
-                <h2>About Judiciary Navigator</h2>
-                <p>
-                    The Judiciary Navigator with AI Chatbot helps you navigate judiciary-related services, including
-                    case status, notices, and more. Our AI Chatbot assists you in finding information quickly and efficiently.
-                </p>
-            </section>
+        <div class="title-container">
+            <img src="data:image/png;base64,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" alt="Justice Logo">
+            <h1>Justice Portal</h1>
         </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </div>
+
+    <!-- Hero Section -->
+    <section class="photo-section">
+        <img src="judiciary_image_hero.jpeg" alt="Judiciary image">
+        <h3>Upholding Justice for All</h3>
+        <p>
+            This platform is dedicated to providing easy access to judiciary services while promoting transparency and efficiency in legal systems.
+        </p>
+    </section>
+    
+
+    <!-- AI Chatbot Section -->
+    <section class="chatbot" id="services">
+        <h2>Chatbot</h2>
+        <div class="chat-container">
+            <div class="messages" id="messages"></div>
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Justice Portal</h2>
+        <p>The Justice Portal helps you navigate judiciary-related services including case statuses, notices, and much more. 
+           Use our AI-powered chatbot for quick and efficient assistance in finding the information you need.</p>
+    </section>
 
     <!-- Bottom Right Login Section -->
     <div class="auth-section">
@@ -100,27 +61,7 @@
         <span>Don't have an account? <a href="#">Sign Up</a></span>
     </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Judiciary Navigator. All Rights Reserved.</p>
-        <p>
-            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#contact-us">Contact Us</a>
-        </p>
-    </footer>
-
     <script>
-        // Perform Search
-        function performSearch() {
-            const query = document.getElementById('search-input').value;
-            if (query) {
-                alert(`Search for: ${query}`);
-                // Add your search logic here
-            } else {
-                alert('Please enter a search term.');
-            }
-        }
-
-        // Chatbot Functionality
         const messagesDiv = document.getElementById("messages");
 
         function addMessage(content, role) {
