@@ -2,7 +2,7 @@
 This is a Mini-Project for AKTU Semester 5 (3rd Year). 
 This was done in a team of 3 (CSAIML-1):
 
-         1)ADITYA VINAYAK
+         1)ADITYA VINAYAK ( https://github.com/AdityAV42 )
          2)ADITI SINGH ( https://github.com/AditiSingh-08 )
          3)ADITI SINGH ( https://github.com/Ads0507 )
 
