@@ -15,3 +15,5 @@ This was done in a team of 3 (CSAIML-1):
 3. By making legal resources easily accessible, the website will boost efficiency, speed up response times, and give users more control. 
 
 4. In the end, this project aims to improve the community's access to justice by increasing judicial transparency, encouraging diversity, and streamlining court procedures.
+
+5. This project include integrated ai chat bot
