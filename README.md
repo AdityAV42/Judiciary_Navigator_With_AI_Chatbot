@@ -14,7 +14,7 @@ This was done in a team of 3 (CSAIML-1):
                          npm install node-fetch
                          node server.js
          3) Go to this address on web browser: Server running on http://localhost:7000  (or the provided port number)   
-         4) press Ctrl + C in your terminal  STOP server .
+NOTE:  When done viewing press Ctrl + C in your terminal  STOP server .
 
 #Objective
 
