@@ -13,7 +13,7 @@ This was done in a team of 3 (CSAIML-1):
                          npm install                                                                                                                                                              
                          npm install node-fetch
                          node server.js
-         3) Go to this address on web browser: Server running on http://localhost:7000                
+         3) Go to this address on web browser: Server running on http://localhost:7000  (or the provided port number)              
 
 #Objective
 
