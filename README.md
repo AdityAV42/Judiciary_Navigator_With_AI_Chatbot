@@ -6,6 +6,9 @@ This was done in a team of 3 (CSAIML-1):
          2)ADITI SINGH ( https://github.com/AditiSingh-08 )
          3)ADITI SINGH ( https://github.com/Ads0507 )
 
+#To run this project follow the Steps: 
+         1> clone the repository                                                                                                                                                                             2> npm install                                                                                                                                                                                      3>npm install node-fetch                                                                                                                                                                            4> node server.js
+
 #Objective
 
 1. The project's goal is to create an AI-integrated website for the UP district court that will improve user interaction and facilitate access to court information. 
