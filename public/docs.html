@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Documents</title>
+
+    <style>
+        /* General Page Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f0e891;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #5b55a5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .section {
+            margin: 20px auto;
+            max-width: 1200px;
+            background: #f3f0e8;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #333;
+            text-transform: uppercase;
+            border-bottom: 2px solid #5b55a5;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .pdf-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .pdf-item {
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pdf-item img {
+            width: 80px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .pdf-item p {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Hover Effects */
+        .pdf-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .pdf-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .pdf-item:active img {
+            transform: scale(0.9);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .pdf-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pdf-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>All Documents</h1>
+    </header>
+
+    <section class="section">
+        <h2>Circular Notices</h2>
+        <div class="pdf-container">
+            <div class="pdf-item">
+                <a href="https://cdnbbsr.s3waas.gov.in/s3ec01f0031c7a91d74015a9addfbc589f/uploads/2024/09/2024092462.pdf" target="_blank">
+                    <img src="pdf-icon.png" alt="PDF 1">
+                    <p>Prevention of Sexual Harassment, Varanasi</p>
+                </a>
+            </div>
+            <div class="pdf-item">
+                <a href="https://cdnbbsr.s3waas.gov.in/s3ec01f0031c7a91d74015a9addfbc589f/uploads/2023/03/2023032149.pdf" target="_blank">
+                    <img src="pdf-icon.png" alt="PDF 2">
+                    <p>Public Notice for Civil Appeals Year 1986 to 1993 <br>(15/03/2023)</p>
+                </a>
+            </div>
+            <!-- Add more notices here -->
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Notifications</h2>
+        <div class="pdf-container">
+            <div class="pdf-item">
+                <a href="https://cdnbbsr.s3waas.gov.in/s3ec01f0031c7a91d74015a9addfbc589f/uploads/2024/11/2024111610.pdf" target="_blank">
+                    <img src="pdf-icon.png" alt="PDF 1">
+                    <p>Calendar 2025 of District Judiciary<br>(13/11/2024)</p>
+                </a>
+            </div>
+
+            <div class="pdf-item">
+                <a href="https://cdnbbsr.s3waas.gov.in/s3ec01f0031c7a91d74015a9addfbc589f/uploads/2024/05/2024052191.pdf" target="_blank">
+                    <img src="pdf-icon.png" alt="PDF 2">
+                    <p>R.T.I. <br>(03/05/2024)</p>
+                </a>
+            </div>
+            
+            <div class="pdf-item">
+                <a href="https://cdnbbsr.s3waas.gov.in/s3ec01f0031c7a91d74015a9addfbc589f/uploads/2023/03/2023032149.pdf" target="_blank">
+                    <img src="pdf-icon.png" alt="PDF 2">
+                    <p>Public Notice for Civil Appeals Year 1986 to 1993<br>(15/03/2023)</p>
+                </a>
+            </div>
+
+            <div class="pdf-item">
+                <a href="https://cdnbbsr.s3waas.gov.in/s3ec01f0031c7a91d74015a9addfbc589f/uploads/2023/03/2023031783.pdf" target="_blank">
+                    <img src="pdf-icon.png" alt="PDF 2">
+                    <p>Guidelines for dealing complaints against officers<br>(01/03/2020)</p>
+                </a>
+            </div>
+
+            <div class="pdf-item">
+                <a href="https://cdnbbsr.s3waas.gov.in/s3ec01f0031c7a91d74015a9addfbc589f/uploads/2024/01/2024010513.pdf" target="_blank">
+                    <img src="pdf-icon.png" alt="PDF 2">
+                    <p>eCourt Fees Rule – 2016<br>(09/02/2016)</p>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
