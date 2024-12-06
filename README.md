@@ -8,7 +8,10 @@ This was done in a team of 3 (CSAIML-1):
 
 #To run this project follow the Steps: 
 
-         1) clone the repository                                                                                                                                                                             2) npm install                                                                                                                                                                                      3)npm install node-fetch                                                                                                                                                                            4) node server.js
+         1) clone the repository                                                                                                  
+         2) npm install                                                                                                                                                                           
+         3)npm install node-fetch                                                                                                                                                                 
+         4) node server.js
 
 #Objective
 
