@@ -6,7 +6,7 @@ const port = 7000;
 
 app.use(express.json());
 
-const API_KEY = 'AIzaSyA5uDHRbewzZIlDvfiz34-9CLcH67u6uM4'; // Gemini API key
+const API_KEY = 'AIzaSyATsgbDHl_GUbdScCs6hIxDcJRBsd3t49g'; // Gemini API key
 const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent';
 
 // Endpoint to handle chatbot requests
@@ -53,3 +53,7 @@ app.use(express.static('public'));
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
+
+// npm install                                                                                                                                                              
+// npm install node-fetch
+// node server.js
