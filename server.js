@@ -6,7 +6,7 @@ const port = 7000;
 
 app.use(express.json());
 
-const API_KEY = 'AIzaSyATsgbDHl_GUbdScCs6hIxDcJRBsd3t49g'; // Gemini API key
+const API_KEY = ''; // Gemini API key
 const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent';
 
 // Endpoint to handle chatbot requests
