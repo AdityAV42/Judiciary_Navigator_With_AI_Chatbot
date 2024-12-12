@@ -28,3 +28,7 @@ NOTE:  When done viewing press Ctrl + C in your terminal  STOP server .
 
    This project includes integrated ai chat bot
 
+
+#Tech Stack
+Fronted: html,css, js 
+Backend: nodejs, express js
